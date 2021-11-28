@@ -1,0 +1,30 @@
+def_init_(self,x,y):
+self.input = x
+self.y.y
+self.output = np.zeros(y.shape)
+self.count = 0
+self.weights1 = np.random.rand(self.input.shape[1],self.y.shape[0])
+self.weights2 = np.random.rand(self.y.shape[0],[1])
+
+def feedforward(self,msg=false,step=100);
+self.layer_1 = sigmoid(np.dot(self.input,self.weights1))
+self.output = sigmoid(np.dot(self.layer_1,self.weights2))
+self.count += 1
+
+if msg:
+
+if(self.count%100==0):
+print "Error at testing round"+	str(self.count)
+print (self.y - self-output)**2
+
+def backprop(self):
+d_weights2 = np.dot (self.layer_1.T,(2*(self.y-self-output)* sigmoid_derivative(self.output)))
+d_weights1 = np.dot (self.layer_1.T,(2*(self.y-self-output)* sigmoid_derivative(self.output),self.weights2.T)*sigmoid_devative(self.layer_1)))
+self.wights1 += d_weights1
+self.wights2 += d_weights2
+
+def predict(self,input):
+self.layer_1 = sigmoid(np.dot(input,self.weights1))
+self.output = sigmoid(np.dot(self.layer_1,self.weights2))
+print "After",self.count,"testing rounds",the prediction for well traiend nn is:"
+print self.output
